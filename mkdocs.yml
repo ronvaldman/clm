@@ -1,0 +1,71 @@
+site_name: CLM 1.0
+site_description: Continuous Learning Model — a living, peer-reviewed open textbook framework.
+
+theme:
+  name: material
+  features:
+    - navigation.expand
+    - navigation.sections
+    - toc.follow
+    - content.code.copy
+    - navigation.instant
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: deep purple
+    - scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  language: en
+  font:
+    text: "Noto Serif"
+    code: "Fira Code"
+
+nav:
+  - Home: index.md
+  - Meta:
+      - "About CLM": meta/about-clm.md
+      - "How to Contribute": meta/contributing.md
+      - "Peer Review Guidelines": meta/peer-review.md
+  - "Computer Science":
+      - "Foundations":
+          - "1. What is Computer Science?": cs/01-what-is-cs.md
+          - "2. Logic & Reasoning": cs/02-logic.md
+          - "3. Binary & Data Representation": cs/03-binary.md
+          - "4. History of Computing": cs/04-history.md
+          - "5. Digital Electronics & Circuits": cs/05-digital-electronics.md
+          - "6. Mathematics for Computing": cs/06-math-foundations.md
+      - "Programming & Software Development":
+          - "7. Programming Fundamentals (Python)": cs/07-python-intro.md
+          - "8. Algorithms & Problem Solving": cs/08-algorithms.md
+          - "9. Data Structures": cs/09-data-structures.md
+          - "10. Object-Oriented Programming": cs/10-oop.md
+          - "11. Software Engineering": cs/11-software-engineering.md
+          - "12. Databases": cs/12-databases.md
+      - "Systems & Architecture":
+          - "13. Computer Architecture": cs/13-architecture.md
+          - "14. Operating Systems": cs/14-os.md
+          - "15. Computer Networks": cs/15-networking.md
+          - "16. Cloud Computing & Virtualization": cs/16-cloud.md
+      - "Theory & Mathematics":
+          - "17. Discrete Mathematics": cs/17-discrete.md
+          - "18. Automata & Computability": cs/18-automata.md
+          - "19. Complexity & Big-O": cs/19-complexity.md
+          - "20. Probability & Statistics for CS": cs/20-probability.md
+      - "Applications & Emerging Topics":
+          - "21. Artificial Intelligence": cs/21-ai.md
+          - "22. Cybersecurity": cs/22-security.md
+          - "23. Web & Mobile Development": cs/23-webdev.md
+          - "24. Human–Computer Interaction": cs/24-hci.md
+          - "25. Data Science Fundamentals": cs/25-data-science.md
+          - "26. Game Development": cs/26-game-dev.md
+
+
+extra_css:
+  - styles/clm.css
+
+extra:
+  generator: false

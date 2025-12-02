@@ -1,0 +1,254 @@
+/* ---- Modern clean typography ---- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600&display=swap');
+
+/* Text and headings */
+:root {
+  --md-text-font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --md-heading-font: "Poppins", "Inter", system-ui, sans-serif;
+}
+
+/* Apply globally */
+.md-typeset {
+  font-family: var(--md-text-font);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* Headings — bold, slightly rounded and modern */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-header__title {
+  font-family: var(--md-heading-font);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #f2f2f2;
+}
+
+
+/* Optional: make tables and code blocks also wider */
+.md-typeset pre,
+.md-typeset table {
+  max-width: 100%;
+}
+
+
+/* ---- Color palette for dark mode ---- */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #0d0d0f;     /* deep charcoal background */
+  --md-default-fg-color: #e5e5e5;     /* softer light text */
+  --md-primary-fg-color: #111111;     /* navbar black */
+  --md-accent-fg-color: #8c6ff7;      /* soft violet accent */
+  --md-code-bg-color: #16161a;        /* subtle contrast for code */
+  --md-code-fg-color: #f8f8f2;
+}
+
+.md-header__title {
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff !important;
+}
+
+/* ---- Sidebar ---- */
+.md-sidebar--primary {
+  background-color: #0f0f10;
+  border-right: 5px solid #3f3f3f;
+}
+
+/* ---- Links ---- */
+.md-typeset a {
+  color: #9a8cff;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.md-typeset a:hover {
+  color: #c7b8ff;
+  text-shadow: 0 0 6px rgba(154, 140, 255, 0.6);
+}
+
+/* ---- Code blocks ---- */
+code, pre {
+  background: #16161a !important;
+  color: #f8f8f2;
+  border-radius: 6px;
+  padding: 2px 4px;
+}
+
+/* ---- Cards / blockquotes ---- */
+blockquote {
+  background: #111111;
+  border-left: 4px solid #8c6ff7;
+  padding: 1rem 1.2rem;
+  border-radius: 6px;
+  color: #ccc;
+}
+
+/* ---- Smooth edges ---- */
+.md-typeset img,
+.md-typeset pre,
+.md-typeset code,
+.md-typeset table,
+.md-sidebar--primary,
+.md-header {
+  border-radius: 8px;
+}
+
+/* ---- Subtle fade for the background ---- */
+body {
+   background: #0d0d0f;
+   background-repeat: no-repeat;
+  }
+
+/* ---- Scrollbar (dark + soft) ---- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* ---- Remove floating background behind sidebar ---- */
+.md-sidebar__scrollwrap,
+.md-sidebar__inner,
+.md-sidebar--primary .md-sidebar__scrollwrap,
+.md-nav__list,
+.md-nav {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Ensure sidebar blends perfectly with page background */
+.md-sidebar--primary {
+  background: #0d0d0f !important; /* same as main background */
+  border-right: 1px solid #1c1c1c;
+}
+
+.md-nav__item a {
+  opacity: 0.8;
+}
+.md-nav__item a:hover,
+.md-nav__item--active a {
+  opacity: 1;
+}
+
+.md-main__inner {
+  padding-top: 10 !important;
+}
+
+.md-main,
+.md-main__inner,
+.md-content,
+.md-content__inner {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Shrink the top margin of the very first H1 on the page */
+.md-typeset h1:first-of-type {
+  margin-top: 0.6rem !important;  /* tweak this value to taste */
+}
+
+/* ensure footer sits nicely at page bottom */
+.md-main {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--md-header-height, 3.2rem));
+  padding-bottom: 25px;
+}
+
+.md-content {
+  flex: 1;
+}
+
+/* ---- Rounded Search Bar ---- */
+.md-search__form {
+  border-radius: 12px !important;        /* round the edges */
+  overflow: hidden !important;           /* clip the inner elements */
+  background: transparent !important;        /* match your code block background */
+}
+
+.md-search__form:hover,
+.md-search__form:focus-within {
+}
+
+/* Round the input inside the search */
+.md-search__input {
+  border-radius: 12px !important;
+  background: transparent !important;
+  color: #e5e5e5 !important;
+}
+
+/* Optional: round the search results dropdown too */
+.md-search__output {
+  border-radius: 12px !important;
+  background: #111111 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem; /* offset for fixed navbar */
+}
+
+/* Optional: Slight easing feel for anchor jumps */
+:target {
+  scroll-margin-top: 4.5rem; /* prevents headings from hiding under navbar */
+}
+
+.md-footer {
+  display: none !important;
+}
+
+/* Optional: center or fade footer text */
+.md-footer-meta__inner {
+  justify-content: center;
+  border-top: none;
+  opacity: 0.8;
+}
+
+.md-footer-meta { border-top: none; }
+
+/* Balanced content width and padding */
+@media (min-width: 960px) {
+  .md-grid {
+    max-width: 90% !important;          /* previously 100% — add breathing room */
+    padding-left: 2.5rem !important;    /* restore some horizontal space */
+    padding-right: 2.5rem !important;
+  }
+
+  .md-content__inner {
+    max-width: 90% !important;          /* keeps text comfortably readable */
+    margin: 0 auto !important;          /* center the content */
+  }
+
+  .md-content {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* Disable search overlay animations */
+.md-search__overlay,
+.md-search__inner,
+.md-search__form,
+.md-search__input {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Optional: make the overlay appear instantly */
+.md-search__overlay {
+  opacity: 1 !important;
+}
+
+.md-search__input {
+  width: 100% !important;
+  transform: none !important;
+  transition: none !important;
+}

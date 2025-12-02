@@ -252,3 +252,93 @@ html {
   transform: none !important;
   transition: none !important;
 }
+
+/* ---- Color palette for light mode (default) ---- */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #f5f5f7;     /* soft off-white background */
+  --md-default-fg-color: #111111;     /* dark text */
+  --md-primary-fg-color: #ffffff;     /* navbar white */
+  --md-accent-fg-color: #5b4acb;      /* gentle violet accent */
+  --md-code-bg-color: #f0eff5;        /* light, subtle code bg */
+  --md-code-fg-color: #222222;
+}
+
+/* Page + navbar */
+[data-md-color-scheme="default"] body {
+  background: #f5f5f7;
+}
+
+[data-md-color-scheme="default"] .md-header {
+  background-color: #ffffff;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+[data-md-color-scheme="default"] .md-header__title {
+  color: #111111 !important;
+}
+
+/* Sidebar */
+[data-md-color-scheme="default"] .md-sidebar--primary {
+  background: #fafafa !important;
+  border-right: 1px solid #e0e0e0;
+}
+
+[data-md-color-scheme="default"] .md-nav__item a {
+  opacity: 0.8;
+}
+
+[data-md-color-scheme="default"] .md-nav__item a:hover,
+[data-md-color-scheme="default"] .md-nav__item--active a {
+  opacity: 1;
+}
+
+/* Links */
+[data-md-color-scheme="default"] .md-typeset a {
+  color: #5b4acb;
+  text-shadow: none;
+}
+
+[data-md-color-scheme="default"] .md-typeset a:hover {
+  color: #7a66f2;
+  text-shadow: 0 0 4px rgba(123, 102, 242, 0.25);
+}
+
+/* Code blocks (override dark global !important) */
+[data-md-color-scheme="default"] code,
+[data-md-color-scheme="default"] pre {
+  background: #f0eff5 !important;
+  color: #222222;
+  border-radius: 6px;
+}
+
+/* Blockquotes */
+[data-md-color-scheme="default"] blockquote {
+  background: #ffffff;
+  border-left: 4px solid #5b4acb;
+  color: #333333;
+}
+
+/* Search */
+[data-md-color-scheme="default"] .md-search__form {
+  background: #f0eff5 !important;
+}
+
+[data-md-color-scheme="default"] .md-search__input {
+  background: transparent !important;
+  color: #111111 !important;
+}
+
+[data-md-color-scheme="default"] .md-search__output {
+  background: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Scrollbar for light mode */
+[data-md-color-scheme="default"] ::-webkit-scrollbar-thumb {
+  background: #c7c7d1;
+}
+
+[data-md-color-scheme="default"] ::-webkit-scrollbar-thumb:hover {
+  background: #a9a9b8;
+}
